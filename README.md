@@ -8,7 +8,7 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8-purple.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-A project by **Tuline** & **Sasha**
+A project by **Tuline** (& **Sasha**)
 
 **Course:** BIO-322: Machine Learning for Life Sciences Engineering  
 
@@ -24,11 +24,14 @@ A project by **Tuline** & **Sasha**
 3.  [**Champion Model Architecture: "Captain v2"**](#3-champion-model-architecture-captain-v2)
 4.  [**Repository Structure**](#4-repository-structure)
 5.  [**Reproducibility Guide**](#5-reproducibility-guide)
+6.  [**AI Disclosure Statement**](#6-ai-disclosure-statement)
 
 ---
 
 ## 1. Abstract
-This project presents a comprehensive machine learning pipeline designed to decode a mouse's behavior and perception from high-dimensional neural recordings. We systematically address the core challenges of this dataset: **non-stationary noise** (session drift), **high dimensionality**, and **severe class imbalance**. Our final model, a custom weighted ensemble named **"Captain v2,"** achieves a final Kaggle Leaderboard score of **0.653**, demonstrating high predictive accuracy. The key breakthrough was the identification and engineering of a feature to model the subject's **internal state (fatigue)**, which, when combined with a diverse set of non-linear models, proved essential for generalizing across different subjects.
+This project presents a comprehensive machine learning pipeline designed to decode a mouse's behavior and perception from high-dimensional neural recordings, culminating in a **first-place finish on the private Kaggle Leaderboard with a final score of 0.62977**. Our final selected model, a custom weighted ensemble named **"Captain v2,"** demonstrated superior robustness and generalization on the hidden 80% of the test data, successfully navigating the leaderboard "shake-up."
+
+Our development process systematically addressed the core challenges of this dataset: non-stationary noise (session drift), high dimensionality, and severe class imbalance. While our best public leaderboard score reached **0.653**, our key breakthrough was identifying that a model's true value lay in its ability to **generalize**. The winning architecture's success is attributed to the identification and engineering of a feature to model the subject's **internal state (fatigue)**. By combining this biologically-inspired feature with a diverse set of non-linear models, our ensemble learned a universal rule that proved highly effective and robust when evaluated against the final, unseen test set.
 
 ## 2. Our Approach: A Narrative of Discovery
 
@@ -106,3 +109,21 @@ pip install -r requirements.txt
 3.  Open `notebooks/solution.ipynb`.
 4.  Ensure the kernel is set to **epfl_project**.
 5.  Run all cells to reproduce the figures, analyses, and the final submission file.
+
+## 6. AI Disclosure Statement
+
+In accordance with EPFL academic policies **(LEX 1.3.3, Article 4)**, we disclose the use of a generative AI tool in the development of this project.
+
+*   **LLM Used:** Google's Gemini.
+
+*   **Role and Manner of Use:**
+    The AI was utilized as an interactive tool for **debugging, code clarification, and scientific cross-referencing**. Its role was strictly that of a technical assistant, analogous to a compiler's error checker or a library's documentation, and was not used for generating core logic or scientific hypotheses. The primary uses were:
+    1.  **Syntax and Debugging:** The AI was instrumental in resolving specific runtime errors (e.g., `ValueError` from Scikit-learn's metadata routing, `TypeError` in NumPy data casting). It helped identify and correct Python syntax for advanced library functions, accelerating our development cycle.
+    2.  **Biological Cross-Referencing:** After we independently generated diagnostic plots and formed our own hypotheses (for example, identifying the "Fatigue" trend in licking probability), we queried the AI for established biological concepts that could explain our findings. This allowed us to connect our data-driven insights to correct scientific terminology, such as "homeostasis" and "neuromodulatory gain control," enriching our written analysis. The AI served as a dynamic textbook, to help us link our biology classes to observed mechanisms.
+    3.  **Code Readability and Documentation:** We used the AI to improve the overall quality and readability of our codebase. This included assistance in generating clear docstrings for our functions and adding explanatory comments to complex logical blocks, making the project more understandable and maintainable.
+    4.  **Language and Redaction:** The AI served as a writing assistant to refine the English phrasing, grammar, and structure of non-code text, such as markdown cells, comments, and this `README.md`. This ensured our scientific narrative was communicated clearly and professionally, using proper markdown syntax.
+
+*   **Adherence to Guidelines and Academic Integrity:**
+    *   **Original Work:** The core intellectual work, including the formulation of hypotheses, the design of experiments, the choice of models, and the final scientific conclusions, is entirely our own. No core project logic or complete analytical code blocks were generated by the AI.
+    *   **Data Privacy:** No private or sensitive data, nor any copyrighted course materials, were shared with the AI tool. All inputs were limited to our own code snippets, error messages, and general scientific inquiries.
+    *   **Verification:** All information provided by the AI, especially regarding biological concepts, was treated as a starting point and cross-verified with credible sources to ensure scientific accuracy.
