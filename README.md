@@ -8,13 +8,13 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8-purple.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-A project by **Tuline** (& **Sasha**)
+A project by **Tuline** & **Sasha**
 
 **Course:** BIO-322: Machine Learning for Life Sciences Engineering  
 
 **Authors:**
 - Tuline Dachraoui (`tuline.dachraoui@epfl.ch`), **SCIPER**: 361774
-- Sasha Ghanipour (`sasha.ghanipour@epfl.ch`)
+- Sasha Ghanipour (`sasha.ghanipour@epfl.ch`), **SCIPER**: 364009
 
 ---
 
